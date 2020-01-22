@@ -11,9 +11,7 @@
 </div>
 <div>
   <label for="bodega">Bodega de destino</label>
-  <select
-    id="bodega"
-    class="form-control">
+  <select id="bodega">
     <option value="bodega1">Bodega1</option>
     <option value="bodega2">Bodega2</option>
     <option value="bodega3">Bodega3</option>
@@ -36,17 +34,29 @@
   <tr>
     <td>12544</td>
     <td>Tornillo</td>
-    <td>5</td>
+    <td>
+      <input type="number" name="cantidad" min="0" value="5">
+    </td>
     <td>Cajax100</td>
-    <td>3</td>
-    <td>2</td>
+    <td>
+      <input type="number" name="entregados" min="0" value="3">
+    </td>
+    <td>
+      <input type="number" name="pendientes" min="0" value="2">
+    </td>
   </tr>
   <tr>
     <td>54549</td>
     <td>Cable</td>
-    <td>100</td>
+    <td>
+      <input type="number" name="cantidad" min="100" value="3">
+    </td>
     <td>mts</td>
-    <td>100</td>
-    <td>0</td>
+    <td>
+      <input type="number" name="entregados" min="0" value="100">
+    </td>
+    <td>
+      <input type="number" name="pendientes" min="0" value="0">
+    </td>
   </tr>
 </table>

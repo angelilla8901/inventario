@@ -4,7 +4,7 @@ import {OrdenComponent} from './orden/orden.component';
 
 
 const routes: Routes = [
-  { path: 'orden', component: OrdenComponent}
+  { path: 'orden-compra', component: OrdenComponent}
 ];
 
 @NgModule({
