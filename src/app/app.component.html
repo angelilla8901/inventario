@@ -1,0 +1,23 @@
+<div>
+  <ul>
+    <li>
+      <a class="active" href="#home">Home</a></li>
+    <li>
+      <a routerLink="orden">Orden de compra</a>
+    </li>
+    <li class="dropdown">
+      <a class="dropbtn">Movimiento</a>
+      <div class="dropdown-content">
+        <a href="#">Entrada con orden de compra</a>
+        <a href="#">Salida a orden de producción</a>
+        <a href="#">Entrada de orden de producción</a>
+      </div>
+    </li>
+    <li>
+      <a href="#producto">Producto</a>
+    </li>
+  </ul>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
