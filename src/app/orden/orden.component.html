@@ -1,62 +1,57 @@
-<h2>Orden de compra</h2>
-<div>
-  <label for="status">Estado</label>
-  <select
-    id="status"
-    class="form-control">
-    <option value="online">Abierto</option>
-    <option value="offline">Cerrado</option>
-    <option value="offline">Cerrado con pendientes</option>
-  </select>
-</div>
-<div>
-  <label for="bodega">Bodega de destino</label>
-  <select id="bodega">
-    <option value="bodega1">Bodega1</option>
-    <option value="bodega2">Bodega2</option>
-    <option value="bodega3">Bodega3</option>
-    <option value="bodega4">Bodega4</option>
-    <option value="bodega5">Bodega5</option>
-    <option value="bodega6">Bodega6</option>
-  </select>
-</div>
-<br/>
-<label>Productos</label>
-<table>
-  <tr>
-    <td>Código</td>
-    <td>Nombre</td>
-    <td>Cantidad</td>
-    <td>Unidad</td>
-    <td>Entregados</td>
-    <td>Pendientes</td>
-  </tr>
-  <tr>
-    <td>12544</td>
-    <td>Tornillo</td>
-    <td>
-      <input type="number" name="cantidad" min="0" value="5">
-    </td>
-    <td>Cajax100</td>
-    <td>
-      <input type="number" name="entregados" min="0" value="3">
-    </td>
-    <td>
-      <input type="number" name="pendientes" min="0" value="2">
-    </td>
-  </tr>
-  <tr>
-    <td>54549</td>
-    <td>Cable</td>
-    <td>
-      <input type="number" name="cantidad" min="100" value="3">
-    </td>
-    <td>mts</td>
-    <td>
-      <input type="number" name="entregados" min="0" value="100">
-    </td>
-    <td>
-      <input type="number" name="pendientes" min="0" value="0">
-    </td>
-  </tr>
-</table>
+<!--<mat-card>-->
+<mat-card-header>
+  <mat-card-title>Orden de compra</mat-card-title>
+</mat-card-header>
+<mat-card-content>
+  <div style=" display: flex; flex-flow: row wrap; justify-content: space-evenly;">
+    <mat-form-field id="status">
+      <mat-select placeholder="Estado">
+        <mat-option value="option">Abierto</mat-option>
+        <mat-option value="option">Cerrado</mat-option>
+        <mat-option value="option">Cerrado con pendientes</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field id="bodega">
+      <mat-select placeholder="Bodega de destino">
+        <mat-option value="option">Bodega1</mat-option>
+        <mat-option value="option">Bodega2</mat-option>
+        <mat-option value="option">Bodega3</mat-option>
+        <mat-option value="option">Bodega4</mat-option>
+        <mat-option value="option">Bodega5</mat-option>
+        <mat-option value="option">Bodega6</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <mat-card style="display: flex; flex-flow: column wrap; align-items: center;">
+    <mat-label>Productos</mat-label>
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="Código">
+          <th mat-header-cell *matHeaderCellDef> Código</th>
+          <td mat-cell *matCellDef="let element"> {{element.codigo}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Nombre">
+          <th mat-header-cell *matHeaderCellDef> Nombre</th>
+          <td mat-cell *matCellDef="let element"> {{element.nombre}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Cantidad">
+          <th mat-header-cell *matHeaderCellDef> Cantidad</th>
+          <td mat-cell *matCellDef="let element"> {{element.cantidad}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Unidad">
+          <th mat-header-cell *matHeaderCellDef> Unidad</th>
+          <td mat-cell *matCellDef="let element"> {{element.unidad}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Entregados">
+          <th mat-header-cell *matHeaderCellDef> Entregados</th>
+          <td mat-cell *matCellDef="let element"> {{element.entregados}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Pendientes">
+          <th mat-header-cell *matHeaderCellDef> Pendientes</th>
+          <td mat-cell *matCellDef="let element"> {{element.pendientes}}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  </mat-card>
+</mat-card-content>
+<!--</mat-card>-->

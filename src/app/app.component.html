@@ -1,26 +1,21 @@
 <div>
-  <ul>
-    <li>
-      <a class="active" href="#home">Home</a></li>
-    <li>
-      <a routerLink="orden-compra">Orden de compra</a>
-    </li>
-    <li>
-      <a href="#orden-produccion">Orden de producción</a>
-    </li>
-    <li class="dropdown">
-      <a class="dropbtn">Movimiento</a>
-      <div class="dropdown-content">
-        <a href="#">Entrada con orden de compra</a>
-        <a href="#">Salida a orden de producción</a>
-        <a href="#">Entrada de orden de producción</a>
-      </div>
-    </li>
-    <li>
-      <a href="#producto">Producto</a>
-    </li>
-  </ul>
-</div>
-<div>
+  <div>
+    <button mat-button [matMenuTriggerFor]="matMenu">Menu</button>
+
+    <mat-menu #matMenu="matMenu">
+      <a mat-menu-item routerLink="orden-compra">Orden de compra</a>
+      <button mat-menu-item>Orden de producción</button>
+      <button mat-menu-item [matMenuTriggerFor]="movimiento">Movimiento</button>
+    </mat-menu>
+
+    <mat-menu #movimiento="matMenu">
+      <button mat-menu-item>Entrada con orden de compra</button>
+      <button mat-menu-item>Salida a orden de producción</button>
+      <button mat-menu-item>Entrada de orden de producción</button>
+    </mat-menu>
+  </div>
+
+  <mat-card>
     <router-outlet></router-outlet>
+  </mat-card>
 </div>
