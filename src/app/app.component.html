@@ -1,18 +1,21 @@
 <div>
   <div>
-    <button mat-button [matMenuTriggerFor]="matMenu">Menu</button>
 
-    <mat-menu #matMenu="matMenu">
-      <a mat-menu-item routerLink="orden-compra">Orden de compra</a>
-      <button mat-menu-item>Orden de producción</button>
-      <button mat-menu-item [matMenuTriggerFor]="movimiento">Movimiento</button>
-    </mat-menu>
-
-    <mat-menu #movimiento="matMenu">
-      <button mat-menu-item>Entrada con orden de compra</button>
-      <button mat-menu-item>Salida a orden de producción</button>
-      <button mat-menu-item>Entrada de orden de producción</button>
-    </mat-menu>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-button [matMenuTriggerFor]="matMenu">Menu</button>
+        <mat-menu #matMenu="matMenu">
+          <a mat-menu-item routerLink="orden-compra">Orden de compra</a>
+          <button mat-menu-item>Orden de producción</button>
+          <button mat-menu-item [matMenuTriggerFor]="movimiento">Movimiento</button>
+        </mat-menu>
+        <mat-menu #movimiento="matMenu">
+          <button mat-menu-item>Entrada con orden de compra</button>
+          <button mat-menu-item>Salida a orden de producción</button>
+          <button mat-menu-item>Entrada de orden de producción</button>
+        </mat-menu>
+      </mat-toolbar-row>
+    </mat-toolbar>
   </div>
 
   <mat-card>

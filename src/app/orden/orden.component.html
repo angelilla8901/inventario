@@ -24,34 +24,37 @@
   </div>
   <mat-card style="display: flex; flex-flow: column wrap; align-items: center;">
     <mat-label>Productos</mat-label>
-      <table mat-table [dataSource]="dataSource">
-        <ng-container matColumnDef="Código">
-          <th mat-header-cell *matHeaderCellDef> Código</th>
-          <td mat-cell *matCellDef="let element"> {{element.codigo}}</td>
-        </ng-container>
-        <ng-container matColumnDef="Nombre">
-          <th mat-header-cell *matHeaderCellDef> Nombre</th>
-          <td mat-cell *matCellDef="let element"> {{element.nombre}}</td>
-        </ng-container>
-        <ng-container matColumnDef="Cantidad">
-          <th mat-header-cell *matHeaderCellDef> Cantidad</th>
-          <td mat-cell *matCellDef="let element"> {{element.cantidad}}</td>
-        </ng-container>
-        <ng-container matColumnDef="Unidad">
-          <th mat-header-cell *matHeaderCellDef> Unidad</th>
-          <td mat-cell *matCellDef="let element"> {{element.unidad}}</td>
-        </ng-container>
-        <ng-container matColumnDef="Entregados">
-          <th mat-header-cell *matHeaderCellDef> Entregados</th>
-          <td mat-cell *matCellDef="let element"> {{element.entregados}}</td>
-        </ng-container>
-        <ng-container matColumnDef="Pendientes">
-          <th mat-header-cell *matHeaderCellDef> Pendientes</th>
-          <td mat-cell *matCellDef="let element"> {{element.pendientes}}</td>
-        </ng-container>
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
+    <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="Código">
+        <th mat-header-cell *matHeaderCellDef> Código</th>
+        <td mat-cell *matCellDef="let element"> {{element.codigo}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre</th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Cantidad">
+        <th mat-header-cell *matHeaderCellDef> Cantidad</th>
+        <td mat-cell *matCellDef="let element"> {{element.cantidad}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Unidad">
+        <th mat-header-cell *matHeaderCellDef> Unidad</th>
+        <td mat-cell *matCellDef="let element"> {{element.unidad}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Entregados">
+        <th mat-header-cell *matHeaderCellDef> Entregados</th>
+        <td mat-cell *matCellDef="let element"> {{element.entregados}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Pendientes">
+        <th mat-header-cell *matHeaderCellDef> Pendientes</th>
+        <td mat-cell *matCellDef="let element"> {{element.pendientes}}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
   </mat-card>
+  <div style="display: flex; justify-content: center;">
+    <button mat-raised-button color="primary">Guardar</button>
+  </div>
 </mat-card-content>
 <!--</mat-card>-->
