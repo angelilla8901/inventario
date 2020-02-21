@@ -1,54 +1,66 @@
-<h2>Orden de compra</h2>
-<div>
-  <label for="status">Estado</label>
-  <select
-    id="status"
-    class="form-control">
-    <option value="online">Abierto</option>
-    <option value="offline">Cerrado</option>
-    <option value="offline">Cerrado con pendientes</option>
-  </select>
-</div>
-<div>
-  <label for="bodega">Bodega de destino</label>
-  <select
-    id="bodega"
-    class="form-control">
-    <option value="bodega1">Bodega1</option>
-    <option value="bodega2">Bodega2</option>
-    <option value="bodega3">Bodega3</option>
-    <option value="bodega4">Bodega4</option>
-    <option value="bodega5">Bodega5</option>
-    <option value="bodega6">Bodega6</option>
-  </select>
-</div>
-<br/>
-<label>Productos</label>
-<table>
-  <tr>
-    <td>Código</td>
-    <td>Nombre</td>
-    <td>Cantidad</td>
-    <td>Unidad</td>
-    <td>Entregados</td>
-    <td>Pendientes</td>
-  </tr>
-  <tr>
-    <td>12544</td>
-    <td>Tornillo</td>
-    <td>5</td>
-    <td>Cajax100</td>
-    <td>3</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>54549</td>
-    <td>Cable</td>
-    <td>100</td>
-    <td>mts</td>
-    <td>100</td>
-    <td>0</td>
-  </tr>
-</table>
+<div class="container">
+  <h2 class="text-center">Orden de compra</h2>
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col">
+      <label for="status">Estado</label>
+      <select
+        id="status"
+        class="form-control">
+        <option value="online">Abierto</option>
+        <option value="offline">Cerrado</option>
+        <option value="offline">Cerrado con pendientes</option>
+      </select>
+    </div>
+    <div class="col">
+      <label for="bodega">Bodega de destino</label>
+      <select
+        id="bodega"
+        class="form-control">
+        <option value="bodega1">Bodega1</option>
+        <option value="bodega2">Bodega2</option>
+        <option value="bodega3">Bodega3</option>
+        <option value="bodega4">Bodega4</option>
+        <option value="bodega5">Bodega5</option>
+        <option value="bodega6">Bodega6</option>
+      </select>
+    </div>
+  </div>
+  <br/>
 
-<button type="button" class="btn btn-success">Basic</button>
+  <div class="row justify-content-center">
+    <label class="text-center">Productos</label>
+    <div class="d-flex justify-content-center table-responsive">
+      <table class="table table-striped w-auto">
+        <thead>
+        <tr>
+          <th scope="col">Código</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Unidad</th>
+          <th scope="col">Entregados</th>
+          <th scope="col">Pendientes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>12544</td>
+          <td>Tornillo</td>
+          <td>5</td>
+          <td>Caja x 100</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>54549</td>
+          <td>Cable</td>
+          <td>100</td>
+          <td>mts</td>
+          <td>100</td>
+          <td>0</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <button type="button" class="btn btn-success">Basic</button>
+  </div>
+</div>
