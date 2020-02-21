@@ -1,5 +1,5 @@
 <mat-card-header>
-  <mat-card-title >Orden de compra</mat-card-title>
+  <mat-card-title>Orden de compra</mat-card-title>
 </mat-card-header>
 <mat-card-content>
   <div style=" display: flex; flex-flow: row wrap; justify-content: space-evenly;">
@@ -51,6 +51,7 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+    <!--style="display: flex; justify-content: center;"-->
     <div style="width: 100%">
       <button mat-raised-button color="primary" style="width: inherit;">Guardar</button>
     </div>
