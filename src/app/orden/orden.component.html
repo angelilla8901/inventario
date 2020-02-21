@@ -1,37 +1,37 @@
 <div class="container">
-  <h2 class="text-center">Orden de compra</h2>
+  <h1 class="text-center">Orden de compra</h1>
   <div class="row row-cols-1 row-cols-md-2">
     <div class="col">
-      <label for="status">Estado</label>
-      <select
-        id="status"
-        class="form-control">
-        <option value="online">Abierto</option>
-        <option value="offline">Cerrado</option>
-        <option value="offline">Cerrado con pendientes</option>
-      </select>
+      <div class="input-group mb-3">
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Status...</option>
+          <option value="online">Abierto</option>
+          <option value="offline">Cerrado</option>
+          <option value="offline">Cerrado con pendientes</option>
+        </select>
+      </div>
     </div>
     <div class="col">
-      <label for="bodega">Bodega de destino</label>
-      <select
-        id="bodega"
-        class="form-control">
-        <option value="bodega1">Bodega1</option>
-        <option value="bodega2">Bodega2</option>
-        <option value="bodega3">Bodega3</option>
-        <option value="bodega4">Bodega4</option>
-        <option value="bodega5">Bodega5</option>
-        <option value="bodega6">Bodega6</option>
-      </select>
+      <div class="input-group mb-3">
+        <select class="custom-select" id="inputGroupSelect02">
+          <option selected>Bodega...</option>
+          <option value="bodega1">Bodega1</option>
+          <option value="bodega2">Bodega2</option>
+          <option value="bodega3">Bodega3</option>
+          <option value="bodega4">Bodega4</option>
+          <option value="bodega5">Bodega5</option>
+          <option value="bodega6">Bodega6</option>
+        </select>
+      </div>
     </div>
   </div>
   <br/>
 
   <div class="row justify-content-center">
-    <label class="text-center">Productos</label>
+    <h4 class="text-center">Productos</h4>
     <div class="d-flex justify-content-center table-responsive">
-      <table class="table table-striped w-auto">
-        <thead>
+      <table class="table table-striped table-hover">
+        <thead class="thead-dark">
         <tr>
           <th scope="col">Código</th>
           <th scope="col">Nombre</th>
